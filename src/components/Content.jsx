@@ -30,6 +30,8 @@ export default function Content(){
       ];
     return(
         <section id="content">
+          <Categories />
+          <section id="videos">
             {videos.map((video)=>{
                 return (
                     <Video 
@@ -40,6 +42,7 @@ export default function Content(){
                     />
                 )
             })}
+            </section>
         </section>
     )
 }
