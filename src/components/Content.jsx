@@ -52,20 +52,20 @@ export default function Content(){
         },
       ];
     return(
-        <section id="content">
-          <Categories />
-          <section id="videos">
-            {videos.map((video)=>{
-                return (
-                    <Video 
-                    key={`video-${video.title}`} 
-                    image={video.image} 
-                    title={video.title} 
-                    channel={video.channel} 
-                    />
-                )
-            })}
-            </section>
+      <section className="col-start-2 col-end-3 row-start-2 row-end-3">
+      <Categories />
+      <section className="grid gap-4 grid-cols-4 pt-4">
+        {videos.map((video)=>{
+            return (
+                <Video 
+                key={`video-${video.title}`} 
+                image={video.image} 
+                title={video.title} 
+                channel={video.channel} 
+                />
+            )
+        })}
         </section>
+    </section>
     )
 }
